@@ -3,9 +3,18 @@
     <div class="main-header row">
       <div class="col-6 main-header-menu">
         <ul>
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
+          <li>
+            <button class="btn-2">Home</button>
+          </li>
+          <li>
+            <button class="btn-2">About</button>
+          </li>
+          <li>
+            <button class="btn-2">Bouquets</button>
+          </li>
+          <li>
+            <button class="btn-2">Contact</button>
+          </li>
         </ul>
       </div>
       <div class="col-6 main-header-link">
@@ -13,24 +22,36 @@
           <li>
             <button class="btn-1">SIGN IN</button>
           </li>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-phone"></i></a></li>
+          <li><a [href]="link.facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a [href]="link.facebook" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a [href]="link.facebook" target="_blank"><i class="fa fa-phone"></i></a></li>
         </ul>
       </div>
     </div>
     <div class="main-banner row">
-      <div class="col-4 main-banner-left">
-        <h1>aloha floral</h1>
+      <div class="col-lg-4 main-banner-left">
+        <h1>aloha flora</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium beatae, distinctio, dolor
           eius enim ex excepturi id laborum nemo nisi, obcaecati omnis provident quasi quisquam tempore tenetur unde
           voluptatibus!</p>
         <div class="left-button dpl-flex">
-          <button class="left-button-1 btn-1">Bouquet</button>
-          <button class="left-button-2 btn-2">Readmore</button>
+          <button class="left-button-1 btn-1" (click)="onNavigateTo(link.facebook)">Bouquet</button>
+          <button class="left-button-2 btn-2" (click)="onNavigateTo(link.facebook)">Readmore</button>
         </div>
       </div>
-      <div class="col-8 main-banner-right">right</div>
+      <div class="col-lg-8 main-banner-right">right</div>
     </div>
+  </div>
+  <div class="container-fluid">
+    <ng-container *ngFor="let item of zodiacAndFlower; let odd = odd">
+      <div class="row main">
+        <div *ngIf="!odd" class="col-6 main-image"><img [srcset]="item.imageURL" alt=""></div>
+        <div class="col-6 main-content">
+          <h1 [style.color]="item.mainColor">{{item.name}}</h1>
+          <p>{{item.note}}</p>
+        </div>
+        <div *ngIf="odd" class="col-6 main-image"><img [srcset]="item.imageURL" alt=""></div>
+      </div>
+    </ng-container>
   </div>
 </div>

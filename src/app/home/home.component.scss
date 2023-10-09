@@ -1,6 +1,7 @@
 
 $color-font-1: #000;
 $color-1: #fff;
+$color-main-1: lightcoral;
 //$color-1: #d59099;
 $box-shadow-1: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 //$box-shadow-2: rgba(0, 0, 0, 0.35) 0 5px 15px;
@@ -18,13 +19,18 @@ $url-1: url("~src/assets/img/bg-04.png");
       border: 1px solid lightcoral;
       padding: 15px;
       ul {
-        margin: 0; padding: 0; display: flex; gap: 10px 50px;
+        margin: 0; padding: 0; display: flex; gap: 10px 30px;
         li {
           list-style: none;
-          a { line-height: 35px; color: $color-font-1; }
+          a {
+            line-height: 35px; color: $color-font-1;
+            i:hover { border-bottom: 1px solid #000; }
+          }
         }
       }
-      .main-header-menu {}
+      .main-header-menu {
+        button:hover { box-shadow: $box-shadow-1; }
+      }
       .main-header-link {
         ul { justify-content: end; }
       }
@@ -36,16 +42,39 @@ $url-1: url("~src/assets/img/bg-04.png");
         min-height: 700px; padding: 10px 50px; text-align: center; line-height: 30px;
         h1 {
           font-family: 'Shadows Into Light', sans-serif;
-          font-size: 70px;
+          font-size: 70px; color: $color-main-1;
         }
-        p {}
+        //p { font-family: 'Pecita', sans-serif; font-size: 20px; }
         .left-button {
           gap: 10px 20px;
-          button.left-button-1 { background-color: lightcoral; }
+          button.left-button-1 { background-color: $color-main-1; }
           button.left-button-2 { font-weight: bold; border: 1px solid #000; }
         }
       }
       .main-banner-right {}
+    }
+  }
+  .container-fluid {
+    margin-top: 150px;
+    .main {
+      .col-6 { margin: 0; padding: 0; }
+      .main-image {
+        height: 800px;
+        img { width: 100%; height: 100%; object-fit: cover; }
+      }
+      .main-content {
+        height: 800px;
+        display: flex; align-items: center; justify-content: center; flex-direction: column;
+        padding: 10px 50px; text-align: center; line-height: 30px;
+        h1 {
+          font-family: 'Pecita', sans-serif;
+          font-size: 70px;
+        }
+        p {
+          font-family: 'Pecita', sans-serif;
+          font-size: 26px;
+        }
+      }
     }
   }
 }
