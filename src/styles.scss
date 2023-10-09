@@ -1,0 +1,28 @@
+
+$box-shadow-1: rgba(100, 100, 111, 0.2) 0 5px 25px 0;
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+button.btn-1 {
+  background-color: black; color: white;
+  font-size: 14px; font-weight: 500;
+  min-height: 35px;
+  padding: 5px 20px;
+  border: none; border-radius: 20px;
+  box-shadow: $box-shadow-1;
+}
+
+button.btn-2 {
+  background-color: transparent; color: #000;
+  font-size: 14px; font-weight: 500;
+  min-height: 35px;
+  padding: 5px 20px;
+  border: none; border-radius: 20px;
+}
+
+.box-shadow-1 { box-shadow: $box-shadow-1; }
+.dpl-flex { display: flex; justify-content: center; align-items: center; }
+
+
