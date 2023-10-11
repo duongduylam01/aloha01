@@ -1,17 +1,5 @@
 {
   "projects": {
-    "default": "aloha-flora",
-    "y": "aloha-flora",
-    "aloha-flora": "aloha-flora"
-  },
-  "targets": {
-    "aloha-5f01b": {
-      "hosting": {
-        "aloha01": [
-          "aloha-5f01b"
-        ]
-      }
-    }
-  },
-  "etags": {}
+    "default": "aloha-flora"
+  }
 }
